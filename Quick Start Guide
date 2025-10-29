@@ -1,0 +1,448 @@
+# Quick Start Guide {#quick-start-guide}
+
+**Goal:** Execute the first three days of any analytics project in a way that prevents rework, surfaces risks early, and aligns stakeholders.
+
+---
+
+## Day 1: Discovery & Kickoff (4–6 hours) {#day-1}
+
+### Morning: Pre-Kickoff Preparation
+**Step 1: Research the Context (45 min)**  
+What to research: prior decks, dashboards, audit/compliance notes, historical metric definitions, prior vendor SLAs.  
+Where to look: analytics repo, BI portal, risk/compliance share, PMO archives.  
+Questions to prepare: who decides, what decision is due when, what is in/out of scope, what constraints exist (data access, policy).
+
+**Step 2: Draft Initial Questions (30 min)**  
+- Business context: target outcome, tradeoffs, constraints.  
+- Current state: existing reports, known gaps, pain points.  
+- Success criteria: metric move, decision date, acceptable error tolerance.  
+- Scope boundary: what’s explicitly out.
+
+**Step 3: Set Up Project Folder (15 min)**  
+```
+/01_discover
+/02_define
+/03_develop
+/04_deliver
+/05_document
+README.md
+```
+**Step 4: Review Project Checklist (15 min)**  
+Confirm charter, mockup plan, validation plan are understood.
+
+### Afternoon: Kickoff Meeting & Charter Draft
+**Step 5: Run the Kickoff (60 min)**  
+Agenda: introductions; business question; decision needed; success criteria; scope; timeline; risks; next steps.  
+Critical questions: what must be decided, by whom, by when; what would make this a “no-go”; whose time is critical.  
+Note-taking: capture decisions and owners live; confirm recap at end.
+
+**Step 6: Draft the Project Charter (90 min)**  
+Use this template and email to sponsor the same day with a confirmation ask.
+### Project Charter Template {#project-charter-template}
+- **Business Question:** 
+- **Decision to Inform:** 
+- **Background & Context:** 
+- **Scope (In/Out):** 
+- **Deliverable Format (pptx, dashboard, memo):** 
+- **Success Criteria (measurable):** 
+- **Timeline & Milestones:** 
+- **Key Metrics (definitions link):** 
+- **Data Sources (owner, refresh cadence):** 
+- **Open Questions:** 
+- **Next Steps & Owners:**
+
+> Email subject: “Charter — [Project Name] — Please review and confirm by [date]”
+
+**End of Day 1 Checkpoint**
+- Charter sent to sponsor
+- Weekly demo time blocked
+- Questions list captured
+
+---
+
+## Day 2: Requirements & Mockup (4–6 hours) {#day-2}
+
+### Morning: Metrics Dictionary & Data Mapping
+**Step 7: Create Metrics Dictionary (90 min)**  
+Include business and technical definitions, data sources, rules, and validation.  
+Examples of strong definitions: specific denominator, clear filters, refresh cadence.
+### Metrics Dictionary Template {#metrics-dictionary-template}
+| Metric | Business Definition | Technical Formula | Data Source | Filters/Rules | Validation Approach | Known Issues |
+|---|---|---|---|---|---|---|
+| Recovery Rate |  |  |  |  |  |  |
+| DPD 30+ |  |  |  |  |  |  |
+| Charge-off Rate |  |  |  |  |  |  |
+
+**Step 8: Map Your Data Sources (60 min)**  
+Draw simple lineage (source → staging → mart/report). Document owners and SLAs.
+
+### Afternoon: Mock Up the Deliverable
+**Step 9: Create Deliverable Mockup (90 min)**  
+- PowerPoint: 1-page exec summary; 3 supporting pages (finding, evidence, implication).  
+- Dashboard: wireframe with filters, KPIs, and drill path.  
+- Excel: tabs for inputs, calc, outputs; clear footnotes.
+
+**Step 10: Get Stakeholder Approval (60 min)**  
+Walk through the mockup; ask for “what would make this fail” feedback. Capture sign-off.
+
+**End of Day 2 Checkpoint**
+- Metrics dictionary drafted
+- Mockup approved or revised with comments
+- Validation plan sketched
+
+---
+
+## Day 3: Data Validation & Planning (4–6 hours) {#day-3}
+
+### Morning: Data Quality Checks
+**Step 11: Pull Sample Data (30 min)**  
+Start with a week or month of data across key tables.
+
+**Step 12: Run Data Quality Checks (90 min)**  
+Completeness, accuracy, consistency, timeliness, uniqueness. Log findings.
+```sql
+-- Sample pulls for Day 3 validation
+
+-- Completeness: expect active accounts in both tables
+SELECT a.account_id
+FROM core_loan a
+LEFT JOIN vendor_recovery b ON a.account_id = b.account_id
+WHERE a.status = 'ACTIVE' AND b.account_id IS NULL;
+
+-- Consistency: check date joins and currency fields
+SELECT COUNT(*) AS bad_rows
+FROM vendor_recovery
+WHERE recovery_amount < 0 OR recovery_date < origination_date;
+
+-- Uniqueness: duplicate keys
+SELECT account_id, recovery_date, COUNT(*) 
+FROM vendor_recovery
+GROUP BY account_id, recovery_date
+HAVING COUNT(*) > 1;
+```
+
+**Step 13: Document Data Issues (30 min)**  
+Open a data quality log with issue, owner, impact, and ETA to resolve.
+
+### Afternoon: Build the Analysis Plan
+**Step 14: Create Analysis Plan (90 min)**  
+Outline phases, estimates, and demo schedule.
+
+**Step 15: Set Up Version Control (30 min)**  
+Create `/src`, `/notebooks`, `/docs`, `/tests`; add a project README.
+
+**Step 16: Schedule Weekly Check-ins (15 min)**  
+Send calendar holds with a standing agenda.
+
+**End of Day 3 Checkpoint**
+- Sample data pulled and checks run
+- Risks logged with owners
+- Analysis plan ready
+- Weekly check-ins scheduled
+
+**Critical Rule Throughout:** no complex coding until Day 4.
+
+---
+
+## Templates & Snippets {#templates}
+
+### Project Charter Template {#project-charter-template}
+- **Business Question:** 
+- **Decision to Inform:** 
+- **Background & Context:** 
+- **Scope (In/Out):** 
+- **Deliverable Format (pptx, dashboard, memo):** 
+- **Success Criteria (measurable):** 
+- **Timeline & Milestones:** 
+- **Key Metrics (definitions link):** 
+- **Data Sources (owner, refresh cadence):** 
+- **Open Questions:** 
+- **Next Steps & Owners:**
+
+### Metrics Dictionary Template {#metrics-dictionary-template}
+| Metric | Business Definition | Technical Formula | Data Source | Filters/Rules | Validation Approach | Known Issues |
+|---|---|---|---|---|---|---|
+| Recovery Rate |  |  |  |  |  |  |
+| DPD 30+ |  |  |  |  |  |  |
+| Charge-off Rate |  |  |  |  |  |  |
+
+### Data Quality Log Template {#dq-log-template}
+| ID | Issue | Impact | Owner | Opened | ETA | Status |
+|---|---|---|---|---|---|---|
+| DQ-001 |  |  |  |  |  | Open |
+
+---
+
+## What Good Looks Like {#what-good-looks-like}
+- Sponsor replies “yes” to the charter recap with no major changes.  
+- Mockup gets explicit approval.  
+- Validation log captures findings and owners by Day 3.  
+- Check-ins recur weekly with a clear decisions-needed list.
+
+
+---
+
+### Additional Tips
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+- Keep charters short and testable.
+- Start small; expand after validation.
+- Label all charts with units and timeframes.
+
+
+---
+
+## Communication Templates {#comm-templates}
+**Kickoff Invite (Email)**
+> Subject: [Project] Kickoff — Decision, Scope, Timeline  
+> Agenda: decision to inform, success criteria, scope (in/out), timeline, risks, next steps.  
+> Materials: prior deck links; initial questions; charter template.
+
+**Charter Confirmation (Email)**
+> Subject: [Project] Charter — Please confirm by [date]  
+> Attached: 1-page charter.  
+> Please confirm: decision owner, due date, success metrics, deliverable format.
+
+**Weekly Demo Recap (Email)**
+> Subject: [Project] Demo Recap — Decisions Needed by [date]  
+> BLUF: one-line takeaway.  
+> Decisions needed: list with owners/dates.  
+> Next steps: who/when.
+
+---
+
+## Additional SQL Snippets {#extra-sql}
+```sql
+-- Consistency across systems (example join rules)
+SELECT a.account_id, a.balance_amt, b.balance_amt AS balance_bi
+FROM core_loan a
+JOIN bi_loan_snapshot b
+  ON a.account_id = b.account_id AND b.as_of_date = CURRENT_DATE
+WHERE ABS(a.balance_amt - b.balance_amt) > 0.01;
+
+-- Timeliness SLA check (expect <= 48 hours lag)
+SELECT DATE_PART('day', CURRENT_DATE - MAX(load_ts)) AS days_since_last_load
+FROM vendor_recovery_load_audit;
+
+-- Uniqueness across composite keys
+SELECT account_id, vendor_id, period, COUNT(*) c
+FROM vendor_scorecard
+GROUP BY 1,2,3
+HAVING COUNT(*) > 1;
+```
+---
+
+## Self-Check Questions (End of Each Day) {#self-check}
+- Is the decision and due date documented?
+- Has a mockup been shown and approved (or revised with comments)?
+- Do we have a validation log with owners and ETAs?
+- Are weekly demos on the calendar with a standing agenda?
+- Are risks visible with owners?
+
+---
+
+## Risks & Responses (Playbook) {#risks-playbook}
+| Risk | Early Signal | Response |
+|---|---|---|
+| Stakeholder disengaged | Missed reviews | Shorten demos, send BLUF recap, escalate with options |
+| Data gaps found | Nulls, mismatches | Log DQ issue, isolate impact, add guardrails |
+| Conflicting metrics | Totals differ | Reconcile to control totals, document deltas |
+| Scope drift | New asks accumulate | Offer tradeoffs, document approvals |
+
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Tip
+- Lead with takeaways; show units/timeframes; annotate anomalies; track decisions visibly.
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
+
+
+### Extra Guidance
+- Bring a one-page mockup to Day 2 approval.
+- Validate a narrow slice of data before coding broadly.
+- Convert questions into testable hypotheses with owners.
+- Keep a live decision log and publish it after each demo.
