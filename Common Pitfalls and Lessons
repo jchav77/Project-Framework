@@ -1,0 +1,765 @@
+# Common Pitfalls and Lessons {#common-pitfalls-and-lessons}
+
+**Version:** 2025-10-29
+
+Purpose: help analytics teams avoid predictable, costly mistakes by using checklists, templates, and early alignment.
+
+---
+
+## Starting to Code on Day 1 {#starting-to-code-on-day-1}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## No Stakeholder Check-ins Until the End {#no-stakeholder-check-ins-until-the-end}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Vague Metrics Definitions {#vague-metrics-definitions}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Data Quality Issues Discovered Late {#data-quality-issues-discovered-late}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Working in Isolation {#working-in-isolation}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## No Mockup of Final Deliverable {#no-mockup-of-final-deliverable}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## "I'll Document This Later" {#i-ll-document-this-later}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Scope Creep Without Timeline Adjustment {#scope-creep-without-timeline-adjustment}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Analysis Without Recommendations {#analysis-without-recommendations}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+
+## Perfectionism Over Pragmatism {#perfectionism-over-pragmatism}
+**What Happens:** Detailed scenario where teams move fast without alignment, causing rework and trust loss.
+
+**Why It’s Expensive:** Wasted build time, delayed decisions, credibility hit with leadership.
+
+**Prevention:**
+- [ ] Confirm decision, due date, and deliverable format.
+- [ ] Create a metrics dictionary with formulas and sources.
+- [ ] Show a mockup in Week 1; secure explicit approval.
+- [ ] Open a validation log by Day 3 and reconcile to control totals.
+- [ ] Hold weekly demos; maintain a decision log.
+
+**Real Examples:**
+- Vendor recovery rate analysis re-run because denominator differed from finance control totals.
+- Operational risk dashboard delayed after late discovery of duplicate account rows.
+- Process cycle time analysis rebuilt when stakeholders expected distribution percentiles, not averages.
+
+---
+
+## Detailed Pitfalls by Phase {#pitfalls-by-phase}
+
+### Discovery
+- Misaligned decisions; unclear owner → **Fix:** Re-charter with decision, owner, date.
+- No calendar holds for demos → **Fix:** Schedule in kickoff.
+- Missing constraints → **Fix:** Capture policy/data constraints explicitly.
+
+### Define
+- Ambiguous metrics → **Fix:** Single-source definitions with examples.
+- Mockup skipped → **Fix:** Require visual sign-off before build.
+- Validation plan absent → **Fix:** Day-3 checks minimum.
+
+### Develop
+- Scope drift untracked → **Fix:** Use tradeoffs template.
+- No reconciliations → **Fix:** Weekly reconcile with production.
+- Docs lag code → **Fix:** Update README in each increment.
+
+### Deliver
+- BLUF missing → **Fix:** Executive summary first.
+- Footnotes absent → **Fix:** Add sources, refresh dates, definitions.
+- No action capture → **Fix:** Owner/date for each decision.
+
+### Document
+- Lessons skipped → **Fix:** 30-min retro with keep/stop/start.
+- Runbook missing → **Fix:** Provide steps, checks, contacts.
+- Handoff shallow → **Fix:** Bundle artifacts and meet.
+
+---
+
+## Warning Signs Your Project Is At Risk {#warning-signs}
+1. Day 1 and code starts without a charter.  
+2. Week 2 and no stakeholder has seen anything.  
+3. KPI totals don’t match finance control totals.  
+4. New asks appear but timeline doesn’t move.  
+5. Validation log is empty.  
+6. “We’ll fix docs later.”  
+7. Conflicting dashboards exist in parallel.  
+8. No owner for open risks.  
+9. Demos get canceled.  
+10. “We found nothing actionable.”
+
+---
+
+## Recovery Strategies {#recovery}
+
+### Wrong deliverable format (discovered Week 4) {#wrong-deliverable-format-discovered-week-4}
+- Pause build; create a 1-page mockup of the expected output
+- Align with sponsor; cut scope to minimum viable insight
+- Schedule a follow-up release for deferred items
+
+### Stakeholder disengaged (Week 2–3) {#stakeholder-disengaged-week-2-3}
+- Shorten demo to 15 minutes with explicit asks
+- Send a BLUF email with a decision needed
+- Escalate respectfully with facts and options
+
+### Major data quality issues (Week 3) {#major-data-quality-issues-week-3}
+- Freeze scope; isolate affected metrics
+- Open DQ issues with owners and ETAs
+- Add guardrails and notes; communicate impact
+
+### Running out of time (Week 3) {#running-out-of-time-week-3}
+- Select MVP metrics only
+- Defer nice-to-haves to a scheduled next release
+- Rehearse a crisp exec summary
+
+### Analysis reveals nothing interesting {#analysis-reveals-nothing-interesting}
+- Revisit the decision framing
+- Add thresholds/benchmarks to force a recommendation
+- Provide 2–3 options with tradeoffs
+
+---
+
+## Success Stories: What Works {#success-stories}
+1) Recovery-rate uplift review reached a decision in one meeting by leading with BLUF and mockup-approved visuals.  
+2) Vendor scorecard stabilized when a single metrics dictionary and reconciliation cadence were adopted.  
+3) Cycle-time improvements landed by pairing a minimal deliverable with a clear runbook and quick follow-up release.  
+4) Risk dashboard trust increased after explicit footnotes and refresh dates were added.  
+5) Weekly demos cut rework by surfacing surprises early.
+
+---
+
+## Final Lessons {#final-lessons}
+**Golden Rules (10):** define “done”; align decisions; validate early; demo weekly; reconcile metrics; document as you go; track scope; capture actions; keep runbooks; run retros.  
+
+**Common Themes:** rework is preventable; clarity beats cleverness; adoption matters more than elegance.  
+
+**Most Important Lesson:** the best analysis is the one leaders *use* to decide.  
+
+**Your Action Plan:** apply the Quick Start on the next project; keep a living decision log; schedule the week-5 retro now.
+
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
+
+### Extra Tip
+- Title slides with takeaways; add units/timeframes; annotate anomalies; version metric definitions.
