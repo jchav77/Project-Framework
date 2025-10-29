@@ -1,0 +1,79 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                 ANALYTICS PROJECT — DESK CHECKLIST (PRINTABLE)              ║
+║                         Reusable for Financial Operations                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────── Week 1: DISCOVER & DEFINE ───────────────────────────────────────┐
+│ Day 1 — Discovery & Kickoff                                                                             │
+│ □ Confirm business decision and due date                                                                │
+│ □ Draft charter and email to sponsor                                                                    │
+│ □ Create folder structure                                                                               │
+│ □ Schedule weekly demos                                                                                 │
+│ □ Capture initial risks/assumptions                                                                     │
+│ □ List data sources and owners                                                                          │
+│ ⚠ Red Flag: Day 1 and writing code without a charter                                                    │
+│                                                                                                         │
+│ Day 2 — Requirements & Mockup                                                                           │
+│ □ Build metrics dictionary                                                                              │
+│ □ Map data lineage                                                                                       │
+│ □ Produce mockup/wireframe                                                                              │
+│ □ Review mockup with stakeholders                                                                       │
+│ □ Record decision and comments                                                                          │
+│ ⚠ Red Flag: Week 2 and stakeholder hasn't seen anything                                                 │
+│                                                                                                         │
+│ Day 3 — Validation & Plan                                                                               │
+│ □ Pull sample data                                                                                      │
+│ □ Run quality checks (complete/accurate/consistent/timely/unique)                                       │
+│ □ Open validation log                                                                                   │
+│ □ Draft analysis plan and estimates                                                                     │
+│ □ Lock weekly check-in agenda                                                                           │
+│ 🚩 Red Flag: No validation log by Day 3                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────── Week 2–3: DEVELOP ──────────────────────────────────────────┐
+│ Every Monday Check-in                                                                                   │
+│ □ Demo WIP; capture decisions                                                                           │
+│ □ Reconcile metrics vs production                                                                       │
+│ □ Update risk/issue log                                                                                 │
+│ □ Confirm scope changes + timeline                                                                      │
+│                                                                                                         │
+│ Build Phase Items                                                                                       │
+│ □ Implement iteratively                                                                                 │
+│ □ Add docstrings and README updates                                                                     │
+│ □ Write unit/spot checks                                                                                │
+│ □ Keep decision log current                                                                             │
+│                                                                                                         │
+│ Red Flags                                                                                               │
+│ 🚨 Escalating scope without timeline change                                                             │
+│ 🚨 Conflicting numbers without reconciliation plan                                                      │
+│ 🚨 No owner for open issues                                                                             │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────── Week 4: DELIVER ──────────────────────────────────────────┐
+│ Finalize                                                                                                 │
+│ □ Polish visuals, footnotes, units                                                                       │
+│ □ Executive summary (BLUF: bottom line up front)                                                         │
+│ □ Dry run questions and risk responses                                                                    │
+│ Present                                                                                                   │
+│ □ Confirm decisions needed and timebox Q&A                                                                │
+│ □ Capture action items (owner/date)                                                                       │
+│ 🚩 Red Flag: Deliverable format surprises stakeholders                                                   │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────── Week 5: DOCUMENT ──────────────────────────────────────────┐
+│ □ Lessons learned                                                                                        │
+│ □ Update README and metrics dictionary                                                                   │
+│ □ Runbook for recurring analyses                                                                         │
+│ □ Handoff checklist completed                                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────── Critical Red Flags — Stop & Reassess ─────────────────────────────┐
+│ 🚨 Coding with no charter                                                                                │
+│ 🚨 No stakeholder demo by end of Week 1                                                                  │
+│ 🚨 Numbers don’t match production with no plan to reconcile                                              │
+│ 🚨 Scope change without timeline change                                                                  │
+│ 🚨 No owner for data quality issues                                                                      │
+│ 🚨 Deliverable format unknown until Week 4                                                               │
+│ 🚨 No decision log or action tracking                                                                    │
+│ 🚨 No documentation opened by Week 3                                                                     │
+└────────────────────
