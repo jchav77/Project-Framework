@@ -1,0 +1,1309 @@
+# AI Prompts Library {#ai-prompts-library}
+
+**Version:** 2025-10-29
+
+Purpose: reusable, expert-crafted prompts for analytics work in financial services operations.
+
+How to use: fill the [bracketed] fields, paste the prompt, and request a structured output.
+
+---
+## Table of Contents {#toc}
+- **Strategic Planning & Problem Solving**
+  - [1. Problem Framing & Definition](#problem-framing-definition-1)
+  - [2. Assumption Testing & Validation](#assumption-testing-validation-2)
+  - [3. Stakeholder Mapping & Analysis](#stakeholder-mapping-analysis-3)
+  - [4. Options Generation & Evaluation](#options-generation-evaluation-4)
+  - [5. Decision Framework Development](#decision-framework-development-5)
+  - [6. Risk Identification & Assessment](#risk-identification-assessment-6)
+- **Analytics & Data Work**
+  - [7. Metrics Definition & Selection](#metrics-definition-selection-7)
+  - [8. Data Analysis Planning](#data-analysis-planning-8)
+  - [9. Root Cause Analysis](#root-cause-analysis-9)
+  - [10. Segmentation Strategy](#segmentation-strategy-10)
+  - [11. Data Quality Assessment](#data-quality-assessment-11)
+  - [12. Statistical Testing Approach](#statistical-testing-approach-12)
+- **Business Analysis**
+  - [13. Cost-Benefit Analysis Framework](#cost-benefit-analysis-framework-13)
+  - [14. Process Improvement Identification](#process-improvement-identification-14)
+  - [15. Vendor/Partner Evaluation](#vendor-partner-evaluation-15)
+  - [16. Gap Analysis](#gap-analysis-16)
+  - [17. Benchmarking & Best Practices](#benchmarking-best-practices-17)
+  - [18. Forecasting Methodology](#forecasting-methodology-18)
+- **Communication & Presentations**
+  - [19. Executive Summary Writing](#executive-summary-writing-19)
+  - [20. Presentation Structure Design](#presentation-structure-design-20)
+  - [21. Data Storytelling](#data-storytelling-21)
+  - [22. Recommendation Development](#recommendation-development-22)
+  - [23. Meeting Agenda & Prep](#meeting-agenda-prep-23)
+  - [24. Email Communication](#email-communication-24)
+- **Project Management**
+  - [25. Project Scoping & Planning](#project-scoping-planning-25)
+  - [26. Quality Assurance Checklist](#quality-assurance-checklist-26)
+  - [27. Documentation Improvement](#documentation-improvement-27)
+  - [28. Prioritization Framework](#prioritization-framework-28)
+  - [29. Change Management Planning](#change-management-planning-29)
+  - [30. Lessons Learned Facilitation](#lessons-learned-facilitation-30)
+
+---
+
+## Strategic Planning & Problem Solving {#strategic-planning-problem-solving}
+### 1. Problem Framing & Definition — Strategic Planning & Problem Solving {#problem-framing-definition-1}
+**Use When:** You need clarity and structure to tackle problem framing & definition in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for problem framing & definition with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: process cycle time analysis for customer onboarding. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 2. Assumption Testing & Validation — Strategic Planning & Problem Solving {#assumption-testing-validation-2}
+**Use When:** You need clarity and structure to tackle assumption testing & validation in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for assumption testing & validation with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 3. Stakeholder Mapping & Analysis — Strategic Planning & Problem Solving {#stakeholder-mapping-analysis-3}
+**Use When:** You need clarity and structure to tackle stakeholder mapping & analysis in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for stakeholder mapping & analysis with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 4. Options Generation & Evaluation — Strategic Planning & Problem Solving {#options-generation-evaluation-4}
+**Use When:** You need clarity and structure to tackle options generation & evaluation in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for options generation & evaluation with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 5. Decision Framework Development — Strategic Planning & Problem Solving {#decision-framework-development-5}
+**Use When:** You need clarity and structure to tackle decision framework development in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for decision framework development with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: risk scoring calibration for early-stage delinquencies. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 6. Risk Identification & Assessment — Strategic Planning & Problem Solving {#risk-identification-assessment-6}
+**Use When:** You need clarity and structure to tackle risk identification & assessment in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for risk identification & assessment with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+
+## Analytics & Data Work {#analytics-data-work}
+### 7. Metrics Definition & Selection — Analytics & Data Work {#metrics-definition-selection-7}
+**Use When:** You need clarity and structure to tackle metrics definition & selection in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for metrics definition & selection with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 8. Data Analysis Planning — Analytics & Data Work {#data-analysis-planning-8}
+**Use When:** You need clarity and structure to tackle data analysis planning in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for data analysis planning with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 9. Root Cause Analysis — Analytics & Data Work {#root-cause-analysis-9}
+**Use When:** You need clarity and structure to tackle root cause analysis in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for root cause analysis with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 10. Segmentation Strategy — Analytics & Data Work {#segmentation-strategy-10}
+**Use When:** You need clarity and structure to tackle segmentation strategy in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for segmentation strategy with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 11. Data Quality Assessment — Analytics & Data Work {#data-quality-assessment-11}
+**Use When:** You need clarity and structure to tackle data quality assessment in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for data quality assessment with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: risk scoring calibration for early-stage delinquencies. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 12. Statistical Testing Approach — Analytics & Data Work {#statistical-testing-approach-12}
+**Use When:** You need clarity and structure to tackle statistical testing approach in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for statistical testing approach with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: vendor recovery rate analysis for auto finance portfolios. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+
+## Business Analysis {#business-analysis}
+### 13. Cost-Benefit Analysis Framework — Business Analysis {#cost-benefit-analysis-framework-13}
+**Use When:** You need clarity and structure to tackle cost-benefit analysis framework in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for cost-benefit analysis framework with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: risk scoring calibration for early-stage delinquencies. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 14. Process Improvement Identification — Business Analysis {#process-improvement-identification-14}
+**Use When:** You need clarity and structure to tackle process improvement identification in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for process improvement identification with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 15. Vendor/Partner Evaluation — Business Analysis {#vendor-partner-evaluation-15}
+**Use When:** You need clarity and structure to tackle vendor/partner evaluation in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for vendor/partner evaluation with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 16. Gap Analysis — Business Analysis {#gap-analysis-16}
+**Use When:** You need clarity and structure to tackle gap analysis in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for gap analysis with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: process cycle time analysis for customer onboarding. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 17. Benchmarking & Best Practices — Business Analysis {#benchmarking-best-practices-17}
+**Use When:** You need clarity and structure to tackle benchmarking & best practices in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for benchmarking & best practices with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 18. Forecasting Methodology — Business Analysis {#forecasting-methodology-18}
+**Use When:** You need clarity and structure to tackle forecasting methodology in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for forecasting methodology with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+
+## Communication & Presentations {#communication-presentations}
+### 19. Executive Summary Writing — Communication & Presentations {#executive-summary-writing-19}
+**Use When:** You need clarity and structure to tackle executive summary writing in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for executive summary writing with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: process cycle time analysis for customer onboarding. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 20. Presentation Structure Design — Communication & Presentations {#presentation-structure-design-20}
+**Use When:** You need clarity and structure to tackle presentation structure design in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for presentation structure design with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 21. Data Storytelling — Communication & Presentations {#data-storytelling-21}
+**Use When:** You need clarity and structure to tackle data storytelling in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for data storytelling with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 22. Recommendation Development — Communication & Presentations {#recommendation-development-22}
+**Use When:** You need clarity and structure to tackle recommendation development in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for recommendation development with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: vendor recovery rate analysis for auto finance portfolios. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 23. Meeting Agenda & Prep — Communication & Presentations {#meeting-agenda-prep-23}
+**Use When:** You need clarity and structure to tackle meeting agenda & prep in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for meeting agenda & prep with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 24. Email Communication — Communication & Presentations {#email-communication-24}
+**Use When:** You need clarity and structure to tackle email communication in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for email communication with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+
+## Project Management {#project-management}
+### 25. Project Scoping & Planning — Project Management {#project-scoping-planning-25}
+**Use When:** You need clarity and structure to tackle project scoping & planning in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for project scoping & planning with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 26. Quality Assurance Checklist — Project Management {#quality-assurance-checklist-26}
+**Use When:** You need clarity and structure to tackle quality assurance checklist in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for quality assurance checklist with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 27. Documentation Improvement — Project Management {#documentation-improvement-27}
+**Use When:** You need clarity and structure to tackle documentation improvement in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for documentation improvement with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 28. Prioritization Framework — Project Management {#prioritization-framework-28}
+**Use When:** You need clarity and structure to tackle prioritization framework in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for prioritization framework with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: data quality investigation on duplicate accounts across systems. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 29. Change Management Planning — Project Management {#change-management-planning-29}
+**Use When:** You need clarity and structure to tackle change management planning in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for change management planning with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: risk scoring calibration for early-stage delinquencies. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+### 30. Lessons Learned Facilitation — Project Management {#lessons-learned-facilitation-30}
+**Use When:** You need clarity and structure to tackle lessons learned facilitation in a real-world analytics context. This prompt aligns decisions, tightens definitions, and produces executive-ready outputs.
+
+**Prompt Template (copy/paste)**
+```
+ROLE: Senior analytics partner.
+CONTEXT:
+  - Business area: [auto finance operations | vendor oversight | collections | servicing]
+  - Decision to inform (who/when): [approve/change/stop by 2025-10-29]
+  - Current pain or risk: [brief]
+OBJECTIVE:
+  - What must be decided and why it matters to operations and risk.
+DATA CONTEXT:
+  - Key tables and owners; refresh cadence; known gaps.
+  - Metrics in scope with definitions or links.
+CONSTRAINTS & RISKS:
+  - Time, access, policy/compliance, model risk, change management.
+REQUEST:
+  - Provide a step-by-step approach for lessons learned facilitation with explicit deliverables.
+  - Call out assumptions to validate, quick wins vs. deeper work.
+  - Specify output format (Markdown with sections, tables, and a one-page summary).
+QUALITY BAR:
+  - Use plain English; define jargon; include footnotes for caveats.
+  - Provide a decisions-needed list with owners and dates.
+```
+
+**Example Usage**
+> Scenario: operational metrics trending for payment processing accuracy. Decision due in two weeks.
+> Ask the AI to draft a plan, produce a metrics table with definitions, and list decisions needed with owners/dates.
+
+**What Good Looks Like**
+- A one-page BLUF summary plus a structured appendix.
+- Clear metric definitions with denominators and filters.
+- Explicit assumptions and validation steps with owners and dates.
+
+**Common Mistakes to Avoid**
+- Vague objectives without a decision owner.
+- Building before mockup approval.
+- Skipping reconciliation with control totals.
+
+
+---
+
+## How to Get Maximum Value {#max-value}
+- Be explicit about the decision and timeline.
+- Link or paste your metric definitions and sample rows.
+- Ask for a BLUF-style summary and a decisions-needed list.
+- Iterate: run a critique pass prompt and refine.
+
+## Quick Reference: If You Need To… {#quick-ref}
+| Task | Prompt |
+|---|---|
+| Define problem | Problem Framing & Definition |
+| Validate assumptions | Assumption Testing & Validation |
+| Map stakeholders | Stakeholder Mapping & Analysis |
+| Compare options | Options Generation & Evaluation |
+| Choose criteria | Decision Framework Development |
+| Identify risks | Risk Identification & Assessment |
+| Define metrics | Metrics Definition & Selection |
+| Plan analysis | Data Analysis Planning |
+| Find root causes | Root Cause Analysis |
+| Segment customers | Segmentation Strategy |
+| Assess data quality | Data Quality Assessment |
+| Plan tests | Statistical Testing Approach |
+| Evaluate vendors | Vendor/Partner Evaluation |
+| Improve process | Process Improvement Identification |
+| Benchmark | Benchmarking & Best Practices |
+| Forecast | Forecasting Methodology |
+| Write exec summary | Executive Summary Writing |
+| Build presentation | Presentation Structure Design |
+| Tell data story | Data Storytelling |
+| Craft recommendations | Recommendation Development |
+| Plan meetings | Meeting Agenda & Prep |
+| Write emails | Email Communication |
+| Scope project | Project Scoping & Planning |
+| QA work | Quality Assurance Checklist |
+| Improve docs | Documentation Improvement |
+| Prioritize | Prioritization Framework |
+| Manage change | Change Management Planning |
+| Run retro | Lessons Learned Facilitation |
+
+## Advanced Tips {#advanced-tips}
+- Chain prompts: framing → plan → critique → final.
+- Keep a prompt log (purpose, draft, final, variables, outcomes).
+- Ask for a risk register with early warning signals.
+
+## Prompt Effectiveness Checklist {#effectiveness}
+- [ ] Clear decision and due date  
+- [ ] Defined outputs and formats  
+- [ ] Data context and constraints supplied  
+- [ ] Assumptions listed and validated  
+- [ ] Actionable next steps produced  
