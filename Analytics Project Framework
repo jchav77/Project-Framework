@@ -1,0 +1,1280 @@
+# Analytics Project Framework {#analytics-project-framework}
+
+**Version:** 2025-10-29  
+**Why this exists:** To provide a complete, reusable methodology for analytics projects in financial services operations (auto finance, vendor management, risk analytics, process improvement).  
+**Philosophy (5 principles):** front-load thinking; show WIP early; define “done”; validate data early; prefer actionable over perfect.
+
+---
+
+## Diagram — The 5 Phases {#diagram}
+```
+DISCOVER  →  DEFINE  →  DEVELOP  →  DELIVER  →  DOCUMENT
+Week 1       Week 1–2    Week 2–4    Week 4–5    Week 5
+```
+**Success factors:** clear decision focus; weekly demos; solid metrics definitions; explicit validation; stakeholder engagement; disciplined change control.
+
+---
+
+## How to Use This Document {#how-to-use}
+1. Start each project by cloning the folder structure and copying the charter template.  
+2. During Week 1–2, finalize the metrics dictionary and mockup before heavy coding.  
+3. In Weeks 2–4, iterate weekly, reconcile metrics, and track changes.  
+4. In Week 4–5, polish, present, and capture decisions.  
+5. In Week 5, document lessons and hand off.
+
+---
+
+## Phase 1: DISCOVER (Week 1) {#phase-1-discover}
+**Why it matters:** Early clarity reduces rework. A 60–90 minute chartering effort often prevents days of rebuilding later.
+
+### Activities
+1) **Pre-kickoff research:** mine prior decks, dashboards, and audit notes.  
+2) **Kickoff meeting:** use a tight agenda to align decisions, success criteria, scope, and timeline.  
+3) **Project charter:** write a one-page charter and confirm via email the same day.
+
+### Kickoff Agenda (60 min)
+- Purpose, decision, due date  
+- Background/context & prior attempts  
+- Scope (in/out) & constraints (policy, data access)  
+- Success criteria and key metrics  
+- Timeline, next steps, owners
+
+### Charter Template
+- Business question; decision to inform; background and context  
+- Scope (in/out); deliverable format; success criteria  
+- Timeline; key metrics; data sources; open questions; next steps
+
+### Discovery Checkpoint
+- Charter emailed and acknowledged  
+- Weekly demo on calendars  
+- Risks and assumptions captured
+
+---
+
+## Phase 2: DEFINE (Week 1–2) {#phase-2-define}
+**Why it matters:** Strong definitions and a mockup ensure we build the right thing.
+
+### Activities
+1) **Metrics Dictionary:** define business and technical formulas, sources, filters, and validation.  
+2) **Deliverable Mockup:** align on output format and story before coding.  
+3) **Validation Plan:** list checks (completeness, accuracy, consistency, timeliness, uniqueness) and sample SQL.
+
+### Metrics Dictionary — Example
+| Metric | Business Definition | Technical Formula | Source | Rules | Validation |
+|---|---|---|---|---|---|
+| Recovery Rate | Recovered $ / Charged-off $ over period | SUM(recovery_amount)/NULLIF(SUM(charge_off_amount),0) | recovery_mart | exclude reversals | reconcile to prod |
+
+### Validation — Example SQL
+```sql
+-- Timeliness: recent data present within SLA
+SELECT MAX(load_date) AS latest_load FROM recovery_mart;
+
+-- Accuracy: sums reconcile with control totals
+SELECT SUM(recovery_amount) FROM recovery_mart
+WHERE recovery_date BETWEEN :start AND :end;
+
+-- Uniqueness: primary key duplicates
+SELECT account_id, recovery_date, COUNT(*) c
+FROM recovery_mart
+GROUP BY 1,2
+HAVING COUNT(*) > 1;
+```
+
+### Define Checkpoint
+- Metrics agreed and versioned  
+- Mockup approved (explicit “yes”)  
+- Validation log opened with owners
+
+---
+
+## Phase 3: DEVELOP (Week 2–4) {#phase-3-develop}
+**Why it matters:** Iteration with weekly demos prevents surprises.
+
+### Activities
+1) **Weekly check-ins:** demo WIP; capture decisions; reconcile metrics.  
+2) **Build with documentation:** docstrings/readme, modular code, small commits.  
+3) **Quality assurance:** add spot checks and unit tests aligned to validation log.  
+4) **Scope management:** when requests change, adjust plan or trade scope.
+
+### Weekly Check-in — Agenda
+- Headline progress (BLUF)  
+- Demo of new increments  
+- Risks/issues & decision requests  
+- Next steps & dates
+
+### Code Documentation — Template
+```
+/src
+  |- __init__.py
+  |- etl/
+  |- features/
+  |- models/
+  |- utils/
+/notebooks
+/docs
+/tests
+README.md  ← how to run, inputs/outputs, assumptions
+```
+
+### Scope Change — Response Template
+> “Thanks for the request. To include [new item], we’ll either extend the timeline by [X] or trade off [Y]. Which path would you prefer?”
+
+### Develop Checkpoint
+- Demos held; decisions logged  
+- Code documented; tests passing  
+- Scope changes approved and tracked
+
+---
+
+## Phase 4: DELIVER (Week 4–5) {#phase-4-deliver}
+**Why it matters:** Clear storytelling (BLUF: bottom line up front) gets decisions made.
+
+### Activities
+1) **Polish the deliverable:** titles as takeaways, units/timeframes, footnotes, accessible contrast.  
+2) **Story structure:** executive summary, then evidence, then implications and decision.  
+3) **Presentation preparation:** timebox Q&A; anticipate tough questions; rehearse.  
+4) **Feedback & follow-up:** capture action items with owners and dates.
+
+### Executive Summary — Pattern
+- Takeaway headline  
+- Three bullets: what, so-what, now-what  
+- Decisions requested with owners/dates
+
+### Deliver Checkpoint
+- Decision recorded  
+- Action items assigned  
+- Follow-up cadence set
+
+---
+
+## Phase 5: DOCUMENT (Week 5) {#phase-5-document}
+**Why it matters:** Documentation reduces risk and speeds future work.
+
+### Activities
+1) **Lessons learned:** short retro capturing keep/stop/start items.  
+2) **Code & analysis docs:** update README, metric definitions, and pipelines.  
+3) **Runbook for recurring analysis:** inputs, steps, schedule, checks, contacts.  
+4) **Knowledge transfer:** handoff meeting with artifacts list.
+
+### Runbook — Template
+- Purpose and scope  
+- Inputs and sources (owners, refresh cadence)  
+- Steps and scripts to run  
+- Checks and thresholds  
+- Outputs and recipients  
+- Contacts and support
+
+---
+
+## Troubleshooting Guide {#troubleshooting}
+Below are common scenarios with actions you can take now and steps to prevent recurrence.
+
+### Unclear requirements {#unclear-requirements}
+**Symptoms:** Stakeholders give conflicting needs; decisions not explicit.
+
+**Fix now:**
+- Re-run a 30-min charter session focused on the decision and due date
+- Draft and circulate a one-page summary; get written confirmation
+- Freeze scope until the decision and success criteria are confirmed
+
+**Prevent next time:**
+- Start every project with a charter
+- Attach decision owners and timelines
+- Keep a visible decision log
+
+
+### Data quality issues mid-build {#data-quality-issues-mid-build}
+**Symptoms:** Unexpected nulls, duplicates, or mismatched totals appear in Week 3.
+
+**Fix now:**
+- Open a DQ issue with owner/ETA
+- Isolate affected metrics
+- Add protective checks in code
+
+**Prevent next time:**
+- Run Day-3 validation by default
+- Track DQ issues from the start
+- Reconcile to control totals weekly
+
+
+### Stakeholder not engaged {#stakeholder-not-engaged}
+**Symptoms:** Reviews missed; feedback arrives too late.
+
+**Fix now:**
+- Shorten demos to 15 minutes
+- Send BLUF recap and explicit asks
+- Escalate early and factually
+
+**Prevent next time:**
+- Put weekly demos on calendar Day 1
+- Use mockups to secure early buy-in
+- Timebox decisions
+
+
+### Scope creep without time change {#scope-creep-without-time-change}
+**Symptoms:** New asks accumulate silently.
+
+**Fix now:**
+- Use the scope-change response template
+- Offer explicit tradeoffs
+- Document approvals
+
+**Prevent next time:**
+- Require decision on tradeoffs
+- Track scope items publicly
+- Review weekly
+
+
+### Conflicting data sources {#conflicting-data-sources}
+**Symptoms:** Two versions of the truth persist.
+
+**Fix now:**
+- Pick a primary source; document differences
+- Add footnotes and links
+- Create a migration plan
+
+**Prevent next time:**
+- Define metrics once
+- Centralize lineage and owners
+- Establish reconciliation cadence
+
+
+### Running out of time {#running-out-of-time}
+**Symptoms:** Deadline near; build unfinished.
+
+**Fix now:**
+- Cut scope to a minimal viable insight
+- Defer nice-to-haves
+- Schedule a follow-up release
+
+**Prevent next time:**
+- Lock MVP during Define phase
+- Validate early
+- Hold weekly decision checkpoints
+
+
+### Analysis reveals nothing actionable {#analysis-reveals-nothing-actionable}
+**Symptoms:** Findings are descriptive but not decision-driving.
+
+**Fix now:**
+- Reframe the decision
+- Add benchmarks/thresholds
+- Propose explicit options and implications
+
+**Prevent next time:**
+- Ask for the decision up front
+- Define success metrics
+- Use options & tradeoffs pattern
+
+
+### Technical roadblocks {#technical-roadblocks}
+**Symptoms:** Access or tooling slows progress.
+
+**Fix now:**
+- Escalate dependency; propose alternatives
+- Parallelize sample calculations
+- Document blockers
+
+**Prevent next time:**
+- List dependencies in charter
+- Add backup paths
+- Keep a short path to sample data
+
+
+### Numbers diverge from production {#numbers-diverge-from-production}
+**Symptoms:** Stakeholders lose trust.
+
+**Fix now:**
+- Open reconciliation task; identify rules/downstream logic
+- Explain differences openly
+- Agree on source of truth
+
+**Prevent next time:**
+- Version metric definitions
+- Run periodic reconciliations
+- Document deltas
+
+
+### Team changes mid-project {#team-changes-mid-project}
+**Symptoms:** New joiners lack context.
+
+**Fix now:**
+- Hold a 30-min handoff
+- Share the README and decision log
+- Assign a buddy
+
+**Prevent next time:**
+- Document as you go
+- Keep the log current
+- Maintain a simple runbook
+
+
+---
+
+## Templates & Checklists Reference {#templates-reference}
+- Charter template (Quick Start)  
+- Metrics dictionary (Quick Start)  
+- Validation log (Quick Start)  
+- Check-in agenda (Develop)  
+- Executive summary pattern (Deliver)  
+- Runbook template (Document)
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
+
+
+### Additional Technique — Data Storytelling {#data-storytelling}
+- Use titles as takeaways; label units and timeframes; avoid dual axes unless necessary.
+- Prefer bars/lines to pies; annotate anomalies; use small multiples for comparisons.
+- Provide source and refresh date; keep definitions in footnotes.
