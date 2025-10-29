@@ -1,0 +1,242 @@
+# README — Analytics Project Framework Guide {#readme-framework-guide}
+
+**Version:** 2025-10-29  
+**Purpose:** Orientation guide for mid-to-senior analytics professionals in financial services operations (loan/lease servicing, vendor oversight, risk analytics, process improvement).  
+**Audience:** Analysts, analytics managers, and cross-functional stakeholders.
+
+---
+
+## Table of Contents {#toc}
+- [Welcome & Purpose](#welcome--purpose)
+- [What’s In This Framework](#whats-in-this-framework)
+- [The Core Framework: 5 Phases](#the-core-framework-5-phases)
+- [Key Principles](#key-principles)
+- [Quick Start: Your First 30 Minutes](#quick-start-your-first-30-minutes)
+- [Success Metrics](#success-metrics)
+- [Red Flags to Watch For](#red-flags-to-watch-for)
+- [Action Plan](#action-plan)
+- [Expected ROI](#expected-roi)
+
+---
+
+## Welcome & Purpose {#welcome--purpose}
+This framework solves common issues that slow analytics projects in financial services operations:
+- Unclear problem definitions and shifting scope
+- Late discovery of data quality issues
+- Deliverables that don’t match executive expectations
+- Ad-hoc practices for requirements, validation, and documentation
+
+**What you gain:** a reusable, end-to-end approach that front-loads critical thinking, validates data early, shows work-in-progress weekly, and standardizes communications with leadership.
+
+**Who it’s for:** mid-to-senior analytics professionals who lead cross-functional work (e.g., vendor performance analysis, operational risk monitoring, process improvement, and metric refreshes).
+
+---
+
+## What’s In This Framework {#whats-in-this-framework}
+This repository contains six documents. Use the table below to decide where to start.
+
+| Document | Purpose | When to Use | Time Required |
+|---|---|---|---|
+| README_Framework_Guide.md | Orientation and how to navigate the framework | First time in the repo; onboarding new team members | 20–30 minutes |
+| Quick_Start_Guide.md | Day-by-day playbook for Days 1–3 | New project kickoff; refresher | 1–2 hours (execution over 3 days) |
+| Project_Checklist_Print.txt | One-page desk reference with red flags and success checks | Daily use; standups | 2 minutes/day |
+| Analytics_Project_Framework.md | Full methodology, templates, and troubleshooting | Building or improving team standards | 1–2 hours deep read; ongoing reference |
+| Common_Pitfalls_and_Lessons.md | What commonly goes wrong and how to avoid it | Pre-mortems; risk reviews | 30–45 minutes |
+| AI_Prompts_Library.md | Reusable AI prompts for analytics work | Throughout all phases | 15–20 minutes to browse; use on demand |
+
+> Tip: Skim the Quick Start to begin executing, then return here for deeper context.
+
+---
+
+## The Core Framework: 5 Phases {#the-core-framework-5-phases}
+**Flow:** **DISCOVER** → **DEFINE** → **DEVELOP** → **DELIVER** → **DOCUMENT**
+
+```
+Week 1         Week 1–2          Week 2–4           Week 4–5          Week 5
+DISCOVER  ──►  DEFINE     ──►    DEVELOP     ──►    DELIVER    ──►     DOCUMENT
+(kickoff, req) (metrics, mock)   (iterate, QA)      (present, act)     (lessons, handoff)
+```
+
+**Phase snapshots:**
+- **DISCOVER (Week 1):** kickoff, charter, requirements, risk scan
+- **DEFINE (Week 1–2):** metrics dictionary, mockup/wireframe, validation plan
+- **DEVELOP (Week 2–4):** iterative build, weekly check-ins, scope control, in-line QA
+- **DELIVER (Week 4–5):** polish deliverable, storytelling, present, capture feedback
+- **DOCUMENT (Week 5):** lessons learned, handoff/runbook, knowledge transfer
+
+---
+
+## Key Principles {#key-principles}
+- **Front-load thinking, back-load building:** clarify the problem, metrics, mockups, and data realities before heavy coding.
+- **Show work-in-progress early and often:** weekly demos reduce surprise and rework.
+- **Define “done” before starting:** charters and mockups set expectations.
+- **Perfect is the enemy of done:** ship the analysis people will use.
+- **Data validation early:** trust but verify (completeness, accuracy, consistency, timeliness, uniqueness).
+- **One metric, one definition:** a single source of truth avoids disputes.
+- **Document as you go:** avoid knowledge loss and speed onboarding.
+
+---
+
+## Quick Start: Your First 30 Minutes {#quick-start-your-first-30-minutes}
+1. **Read the Quick Start** (5–10 min): focus on Day 1 activities and the kickoff agenda.  
+2. **Copy templates** from *Analytics_Project_Framework.md* (charter, metrics dictionary, validation log).  
+3. **Create a repo folder** structure: `/01_discover/`, `/02_define/`, `/03_develop/`, `/04_deliver/`, `/05_document/`.  
+4. **Draft a 1-page charter** using the template; send it to the sponsor for confirmation.  
+5. **Schedule weekly demos** and add a recurring status email with decisions needed.
+
+---
+
+## Success Metrics {#success-metrics}
+**Efficiency:** days from kickoff to first insight; % rework after mockup sign-off; build hours after validation.  
+**Process:** charter completed; weekly check-ins held; validation log opened by Day 3.  
+**Quality:** prod vs. analysis metric alignment; error rate; stakeholder satisfaction score.  
+**Outcomes:** decisions made based on analysis; adoption (usage) of outputs; measurable impact on KPIs (e.g., recovery rate, cycle time).
+
+---
+
+## Red Flags to Watch For {#red-flags-to-watch-for}
+- **Day 1 and you’re writing code** without a charter or questions list.  
+- **Week 2 and stakeholders haven’t seen anything** (no mockup, no demo).  
+- **Numbers don’t match existing reports** and there’s no reconciliation plan.  
+- **Complex builds without a clear decision** they will inform.  
+- **No validation log** by Day 3.
+
+---
+
+## Action Plan {#action-plan}
+**Today (30 min):** skim Quick Start, create folders, schedule demos, draft charter.  
+**This week:** finalize metrics dictionary; mock up deliverable; open validation log.  
+**Day 1 of next project:** replay this Quick Start exactly; tailor only where needed.  
+**During next project:** show weekly WIP; reconcile metrics; log decisions.  
+**After next project:** run a 30-minute retro and add lessons to the repository.
+
+---
+
+## Expected ROI {#expected-roi}
+| Area | Without Framework | With Framework | Benefit |
+|---|---|---|---|
+| Time-to-insight | Weeks of drift | First insight within 1–2 weeks | Faster impact |
+| Rework | Frequent, late in project | Small, early course-corrections | Less waste |
+| Stakeholder alignment | Surprises at the end | Weekly visibility and sign-offs | Fewer escalations |
+| Data trust | Ad-hoc checks | Formal validation by Day 3 | Fewer credibility hits |
+| Adoption | Deliverable mismatch | Mockup-driven outputs | Higher usage |
+
+**Bottom line:** This framework trades a small upfront planning cost for large reductions in rework and missed expectations.
+
+
+---
+
+### Notes
+- This guide is intentionally concise. Refer to the full methodology for deeper templates and examples.
+
+
+---
+
+### Notes
+- This guide is intentionally concise. Refer to the full methodology for deeper templates and examples.
+
+
+---
+
+### Notes
+- This guide is intentionally concise. Refer to the full methodology for deeper templates and examples.
+
+
+---
+
+## Roles & Responsibilities {#roles}
+- **Sponsor:** defines the decision and success criteria; approves scope changes.
+- **Analytics Lead:** owns the charter, validation plan, weekly demos, and delivery.
+- **Data Owner:** ensures source access, quality, and refresh cadence.
+- **Stakeholders:** provide timely feedback; attend demos; own action items.
+- **Reviewer (QA/Model Risk):** checks definitions, methods, and documentation.
+
+## Example Timeline {#example-timeline}
+| Week | Milestone | Notes |
+|---|---|---|
+| 1 | Kickoff + Charter | Weekly demo invites sent |
+| 1–2 | Metrics + Mockup | Sign-off before coding |
+| 2–4 | Iterative Build | Reconcile to prod each week |
+| 4–5 | Deliver + Decide | BLUF + actions |
+| 5 | Document + Handoff | Retro + runbook |
+
+## FAQ {#faq}
+**Q: Why not start coding immediately?**  
+A: Early coding without alignment usually causes rework. A short charter and mockup prevent wasted effort.
+
+**Q: How do we handle disagreements about numbers?**  
+A: Use the metrics dictionary and reconciliation notes; agree on the source of truth and document differences transparently.
+
+**Q: What if stakeholders miss demos?**  
+A: Shorten to 15 minutes, send BLUF recaps with explicit asks, and escalate early with options.
+
+## Glossary {#glossary}
+- **BLUF:** bottom line up front (lead with the conclusion).  
+- **RACI:** Responsible, Accountable, Consulted, Informed (roles model).  
+- **Guardrail Metric:** a safety indicator that prevents harm while optimizing outcomes.  
+- **Lineage:** path of data from source to output, including transforms.  
+- **Control Totals:** known sums used to reconcile calculations.
+
+
+---
+
+### Additional Notes
+- Keep decision focus explicit.
+- Version your metric definitions.
+- Record every decision with owner and date.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
+
+
+### Pro Tips
+- Lead with the decision and due date.
+- Use one metric, one definition.
+- Reconcile to control totals weekly.
+- Show WIP early; capture decisions.
